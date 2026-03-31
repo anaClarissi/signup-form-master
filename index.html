@@ -36,13 +36,45 @@
 
       <form id="formulary">
 
-        <input type="text" name="first-name" id="first-name" placeholder="First Name">
+        <article class="input_area">
+          
+          <input type="text" name="first-name" id="first-name" placeholder="First Name">
 
-        <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+          <p>First Name cannot be empty</p>
 
-        <input type="email" name="email-address" id="email-address" placeholder="Email Address">
+          <img src="src/images/icon-error.svg" alt="icon error" class="error-icon">
+        
+        </article>
 
-        <input type="password" name="password" id="password" placeholder="Password">
+        <article class="input_area">
+          
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+
+          <p>Last Name cannot be empty</p>
+
+          <img src="src/images/icon-error.svg" alt="icon error" class="error-icon">
+        
+        </article>
+
+        <article class="input_area">
+          
+          <input type="email" name="email-address" id="email-address" placeholder="Email Address">
+
+          <p>Looks like this is not an email</p>
+
+          <img src="src/images/icon-error.svg" alt="icon error" class="error-icon">
+        
+        </article>
+
+        <article class="input_area">
+          
+          <input type="password" name="password" id="password" placeholder="Password">
+
+          <p>Password cannot be empty</p>
+
+          <img src="src/images/icon-error.svg" alt="icon error" class="error-icon">
+        
+        </article>
         
         <button type="button" id="btn-free-trial">Claim your free trial</button>
 
@@ -56,5 +88,7 @@
     </section>
   </main>
   
+  <script src="src/js/script.js"></script>
+
 </body>
 </html>

@@ -3,6 +3,7 @@
 :root {
     --red-01: #ff7a7a;
     --green-01: #38cc8c;
+    --green-02: #77E2B4;
     --gray-01: #3e3c49 ;
     --purple-01: #6055a5;
     --purple-02: #b9b6d3;
@@ -99,8 +100,14 @@ body {
     box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.15);
 }
 
-#formulary input {
-    padding: 20px 40px;
+.input_area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input_area input {
+    padding: clamp(20px, 1vw,20px) clamp(20px, 2vw,40px);
     border-radius: 5px;
     caret-color: var(--purple-01);
     font-size: clamp(0.8rem, 1vw,1.1rem);
@@ -111,13 +118,47 @@ body {
     transition: border .2s ease-in-out;
 }
 
-#formulary input::placeholder {
+.input_area input::placeholder {
     font-size: clamp(0.8rem, 1vw,1.1rem);
     font-weight: 600;
 }
 
-#formulary input:focus {
+.input_area input:focus {
     border: 1px solid var(--purple-02);
+}
+
+.input_area p {
+    height: 20px;
+    color: var(--red-01);
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-weight: 600;
+    text-align: right;
+    opacity: 0;
+}
+
+.error_input input {
+    border: 3px solid var(--red-01);
+}
+
+.error_input p, .error_input .error-icon {
+    opacity: 1;
+}
+
+.error_input input::placeholder {
+    color: white;
+}
+
+.error_input input[type="email"]::placeholder {
+    color: var(--red-01);
+}
+
+.error-icon {
+    position: absolute;
+    top: calc(50% - 20px);
+    transform: translateY(-50% + 20px);
+    right: 0;
+    margin-right: 5%;
+    opacity: 0;
 }
 
 #btn-free-trial {
@@ -129,6 +170,12 @@ body {
     border-radius: 7px;
     background-color: var(--green-01);
     box-shadow: inset 0px -5px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#btn-free-trial:focus, #btn-free-trial:hover {
+    background-color: var(--green-02);
 }
 
 .form_footer p{
