@@ -19,4 +19,126 @@
 body {
     font-family: var(--font-primary), Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    min-height: 100vh;
+    width: 100%;
+    padding:  calc(10vh) calc(15vw);
+    background-color: var(--red-01);
+    background-image: url('../images/bg-intro-desktop.png');
+}
+
+.container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 70vh;
+}
+
+.content_main {
+    color: #FFF;
+    gap: clamp(40px, 3vw, 50px);
+}
+
+.content_main h1 {
+    font-size: clamp(1.4rem, 4vw, 4.5rem);
+    line-height: 1;
+}
+
+.content_main p {
+    font-size: clamp(0.8rem,1vw, 1.2rem);
+    font-weight: 500;
+    line-height: clamp(1,1.5vw, 1.6);
+}
+
+.content_form {
+    gap: 2vw;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 70px;
+    height: 10%;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: var(--purple-01);
+    box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.card p {
+    font-size: clamp(0.8rem,1vw, 1.2rem);
+    font-weight: 400;
+    line-height: clamp(1,1.5vw, 1.6);
+}
+
+.card p span {
+    font-weight: 700;
+}
+
+#formulary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    height: 90%;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+#formulary input {
+    padding: 20px 40px;
+    border-radius: 5px;
+    caret-color: var(--purple-01);
+    font-size: clamp(0.8rem, 1vw,1.1rem);
+    color: var(--gray-01);
+    font-weight: 600;
+    outline: none;
+    border: 1px solid #bbb;
+    transition: border .2s ease-in-out;
+}
+
+#formulary input::placeholder {
+    font-size: clamp(0.8rem, 1vw,1.1rem);
+    font-weight: 600;
+}
+
+#formulary input:focus {
+    border: 1px solid var(--purple-02);
+}
+
+#btn-free-trial {
+    text-transform: uppercase;
+    font-size: clamp(0.9rem, 1vw,1.25rem);
+    color: #FFF;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--green-01);
+    box-shadow: inset 0px -5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form_footer p{
+    color: #aaa;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-weight: 500;
+}
+
+.form_footer p a {
+    color: var(--red-01);
+    text-decoration: none;
+    font-weight: 700;
 }
